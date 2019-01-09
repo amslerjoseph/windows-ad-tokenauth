@@ -38,7 +38,7 @@ namespace YOURNAMESPACEHERE
             {
                 const string LDAP_DOMAIN = "@Insert Domain here@";
 
-                /************** THIS REQUIRES THE COMPATIBILITY PACK FROM ASP.NET *****************/
+                /************** THIS REQUIRES THE COMPATIBILITY PACK FROM MICROSOFT *****************/
                 using (var context = new PrincipalContext(ContextType.Domain, LDAP_DOMAIN, "service_acct_user", "service_acct_pswd"))
                 {
                     if (context.ValidateCredentials(aduser.Username, aduser.Password))
